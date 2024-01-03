@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 3-tier-config
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ARCHIT1607/3-tier-argocd-config.git
+    targetRevision: HEAD
+    path: ./Dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
