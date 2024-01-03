@@ -56,12 +56,15 @@ After you're done installing the tools.
     ```
 
     Once the status of application is Synced.
+    ![ArgoCD Dashboard](images/argocd-dashboard.png)
 
     To test if the deployment is successful through UI
     visit the below Url to access UI and perform the tasks
     ```
     http://127.0.0.1:3000/
     ```
+
+     ![UI](images/application.png)
     
 - **To see syncing in action** <br>
     Update the k8 manifest files through git and ArgoCD will poll the changes every 3 times so once it observes the desired state
