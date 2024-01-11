@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: spring-backend-deployment
-        image: architdev/spring-backend:25
+        image: architdev/spring-backend:26
         ports:
         - containerPort: 8080
         env:
